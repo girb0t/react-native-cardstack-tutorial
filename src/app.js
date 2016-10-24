@@ -4,13 +4,14 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 
 import reducers from './reducers';
+import { Header } from './components/common'
 
 // Provider is the thing that binds redux with React
 const App = () => {
   return (
     <Provider store={createStore(reducers)}>
       <View>
-        <Text>Hello World</Text>
+        <Header headerText="Yolo" />
       </View>
     </Provider>
   );
