@@ -5,6 +5,7 @@ import ListItem from './ListItem';
 
 class LibraryList extends Component {
   componentWillMount() {
+    // about ListViewDataSource: https://facebook.github.io/react-native/docs/listviewdatasource.html
     const ds = new ListView.DataSource({
       rowHasChanged: (r1, r2) => r1 !== r2
     });
