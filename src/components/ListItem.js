@@ -7,9 +7,10 @@ import * as actions from '../actions';
 class ListItem extends Component {
   renderDescription() {
     const { library, selectedLibraryId } = this.props;
+    const { descriptionStyle } = styles;
     if (library.id === selectedLibraryId) {
       return (
-        <Text>{library.description}</Text>
+        <Text style={descriptionStyle}>{library.description}</Text>
       );
     }
   }
@@ -38,6 +39,11 @@ const styles = {
   titleStyle: {
     fontSize: 18,
     paddingLeft: 15
+  },
+  descriptionStyle: {
+    paddingLeft: 20,
+    paddingRight: 20,
+    paddingBottom: 5,
   }
 };
 
